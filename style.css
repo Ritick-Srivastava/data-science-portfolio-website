@@ -392,7 +392,6 @@ nav ul li a:hover {
     font-size: 0.9rem;
     color: var(--text-dim);
     margin-bottom: 1.5rem;
-    height: 3.6em;
     overflow: hidden;
 }
 
