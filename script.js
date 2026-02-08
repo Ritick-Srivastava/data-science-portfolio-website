@@ -32,16 +32,17 @@ if (contactForm) {
 
 // Reveal animations on scroll
 const reveal = () => {
-    const reveals = document.querySelectorAll('.project-card');
-    for (let i = 0; i < reveals.length; i++) {
+    const reveals = document.querySelectorAll('.project-card, .timeline-item, .skill-category');
+    reveals.forEach(element => {
         const windowHeight = window.innerHeight;
-        const revealTop = reveals[i].getBoundingClientRect().top;
-        const revealPoint = 150;
+        const revealTop = element.getBoundingClientRect().top;
+        const revealPoint = 100;
         if (revealTop < windowHeight - revealPoint) {
-            reveals[i].style.opacity = '1';
-            reveals[i].style.transform = 'translateY(0)';
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
         }
-    }
+    });
 };
 
 window.addEventListener('scroll', reveal);
+reveal(); // Initial check
