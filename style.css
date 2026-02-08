@@ -34,9 +34,9 @@ h3 {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 5%;
 }
 
 /* Navbar */
@@ -122,7 +122,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     margin-bottom: 1rem;
     background: linear-gradient(to right, #fff, #94a3b8);
     -webkit-background-clip: text;
@@ -132,7 +132,7 @@ nav ul li a:hover {
 }
 
 .hero h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
     color: var(--text-dim);
     margin-bottom: 2rem;
     font-weight: 400;
@@ -140,11 +140,11 @@ nav ul li a:hover {
 
 .hero-summary {
     margin-bottom: 2.5rem;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .hero-summary p {
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
     color: var(--text-dim);
     margin-bottom: 0px;
 }
@@ -247,14 +247,14 @@ nav ul li a:hover {
 }
 
 .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 4rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: clamp(3rem, 6vw, 5rem);
     text-align: center;
 }
 
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -338,8 +338,8 @@ nav ul li a:hover {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
 }
 
 .project-card {
