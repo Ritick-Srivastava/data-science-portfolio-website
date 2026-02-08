@@ -138,14 +138,18 @@ nav ul li a:hover {
     font-weight: 400;
 }
 
-.hero p {
-    font-size: 1.1rem;
-    color: var(--text-dim);
+.hero-summary {
     margin-bottom: 2.5rem;
-    max-width: 500px;
+    max-width: 600px;
 }
 
-.hero p strong {
+.hero-summary p {
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-bottom: 0px;
+}
+
+.hero-summary p strong {
     color: var(--text-main);
 }
 
