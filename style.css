@@ -415,6 +415,11 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
+.project-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
 .project-link {
     font-size: 0.85rem;
     color: var(--text-main);
