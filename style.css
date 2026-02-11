@@ -428,6 +428,28 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
+.project-details {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.project-details li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.project-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
 /* Skills & Education */
 .skills-section {
     padding: 100px 0;
@@ -441,12 +463,36 @@ nav ul li a:hover {
     margin-bottom: 5rem;
 }
 
+.skill-category {
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-category:hover {
+    border-color: var(--accent-color);
+    background: rgba(0, 210, 255, 0.08);
+    /* Brighter highlight */
+    transform: translateY(-10px) scale(1.02);
+    /* More lift and slight scale */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 210, 255, 0.2);
+    z-index: 10;
+}
+
 .skill-category h3 {
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
     color: var(--accent-color);
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.skill-category:hover h3 {
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
 }
 
 .skill-labels {
