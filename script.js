@@ -31,18 +31,17 @@ if (contactForm) {
 }
 
 // Reveal animations on scroll
-const reveal = () => {
-    const reveals = document.querySelectorAll('.project-card, .timeline-item, .skill-category');
-    reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const revealTop = element.getBoundingClientRect().top;
-        const revealPoint = 100;
-        if (revealTop < windowHeight - revealPoint) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
         }
     });
-};
+}, {
+    threshold: 0.1
+});
 
-window.addEventListener('scroll', reveal);
-reveal(); // Initial check
+document.querySelectorAll('.project-card, .timeline-item, .skill-category, .section-title, .education-card').forEach(el => {
+    el.classList.add('reveal');
+    revealObserver.observe(el);
+});
