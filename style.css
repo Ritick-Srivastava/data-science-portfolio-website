@@ -98,6 +98,7 @@ nav ul li a:hover {
     align-items: center;
     padding-top: 100px;
     padding-bottom: 50px;
+    position: relative;
 }
 
 .hero .container {
