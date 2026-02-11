@@ -38,10 +38,35 @@ const revealObserver = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.1
+    threshold: 0.15
 });
 
-document.querySelectorAll('.project-card, .timeline-item, .skill-category, .section-title, .education-card').forEach(el => {
-    el.classList.add('reveal');
-    revealObserver.observe(el);
-});
+// Setup reveal elements
+const setupReveals = () => {
+    // Section headers reveal up
+    document.querySelectorAll('.section-title, .education-card').forEach(el => {
+        el.classList.add('reveal', 'reveal-up');
+        revealObserver.observe(el);
+    });
+
+    // Staggered contents
+    const staggerConfigs = [
+        { container: '.project-grid', items: '.project-card', revealClass: 'reveal-up' },
+        { container: '.timeline', items: '.timeline-item', revealClass: 'reveal-left' },
+        { container: '.skills-grid', items: '.skill-category', revealClass: 'reveal-right' }
+    ];
+
+    staggerConfigs.forEach(config => {
+        const container = document.querySelector(config.container);
+        if (container) {
+            container.classList.add('stagger-container');
+            container.querySelectorAll(config.items).forEach((item, index) => {
+                item.classList.add('reveal', config.revealClass);
+                item.style.setProperty('--order', index);
+                revealObserver.observe(item);
+            });
+        }
+    });
+};
+
+setupReveals();

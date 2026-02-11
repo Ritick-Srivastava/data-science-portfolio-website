@@ -732,11 +732,38 @@ footer {
 /* Reveal on Scroll */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transition: all 1s cubic-bezier(0.21, 0.45, 0.32, 0.9);
+}
+
+.reveal.reveal-up {
+    transform: translateY(50px);
+}
+
+.reveal.reveal-down {
+    transform: translateY(-50px);
+}
+
+.reveal.reveal-left {
+    transform: translateX(50px);
+}
+
+.reveal.reveal-right {
+    transform: translateX(-50px);
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(0, 0) scale(1);
+}
+
+/* Staggered children reveal */
+.stagger-container .reveal {
+    transition-delay: calc(var(--order) * 0.15s);
+}
+
+/* Section specific tweaks for better visuals */
+.project-card,
+.timeline-item,
+.skill-category {
+    will-change: transform, opacity;
 }
