@@ -31,18 +31,42 @@ if (contactForm) {
 }
 
 // Reveal animations on scroll
-const reveal = () => {
-    const reveals = document.querySelectorAll('.project-card, .timeline-item, .skill-category');
-    reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const revealTop = element.getBoundingClientRect().top;
-        const revealPoint = 100;
-        if (revealTop < windowHeight - revealPoint) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+// Setup reveal elements
+const setupReveals = () => {
+    // Section headers reveal up
+    document.querySelectorAll('.section-title, .education-card').forEach(el => {
+        el.classList.add('reveal', 'reveal-up');
+        revealObserver.observe(el);
+    });
+
+    // Staggered contents
+    const staggerConfigs = [
+        { container: '.project-grid', items: '.project-card', revealClass: 'reveal-up' },
+        { container: '.timeline', items: '.timeline-item', revealClass: 'reveal-left' },
+        { container: '.skills-grid', items: '.skill-category', revealClass: 'reveal-right' }
+    ];
+
+    staggerConfigs.forEach(config => {
+        const container = document.querySelector(config.container);
+        if (container) {
+            container.classList.add('stagger-container');
+            container.querySelectorAll(config.items).forEach((item, index) => {
+                item.classList.add('reveal', config.revealClass);
+                item.style.setProperty('--order', index);
+                revealObserver.observe(item);
+            });
         }
     });
 };
 
-window.addEventListener('scroll', reveal);
-reveal(); // Initial check
+setupReveals();
