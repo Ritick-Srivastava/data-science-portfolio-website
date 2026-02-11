@@ -243,12 +243,12 @@ nav ul li a:hover {
 .abstract-viz::before {
     content: '';
     position: absolute;
-    width: 80%;
-    height: 80%;
+    width: 88%;
+    height: 88%;
     border-left: 2px solid rgba(0, 210, 255, 0.2);
     border-bottom: 2px solid rgba(0, 210, 255, 0.2);
-    top: 10%;
-    left: 10%;
+    top: 6%;
+    left: 6%;
 }
 
 .data-point {
