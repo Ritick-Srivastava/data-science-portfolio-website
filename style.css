@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --primary-bg: #03050a;
     --secondary-bg: #090c14;
     --accent-color: #00d2ff;
@@ -92,6 +92,35 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--accent-color);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-main);
+    margin: 4px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+/* Mobile Menu Active State (Hamburger to X) */
+.mobile-nav-active .menu-toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-nav-active .menu-toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-nav-active .menu-toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Hero Section */
@@ -901,33 +930,6 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
-    .hero .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        margin: 0 auto 2.5rem;
-    }
-
-    .hero-btns {
-        justify-content: center;
-    }
-
-    .navbar nav {
-        display: none;
-    }
-
-    .contact-box {
-        padding: 2rem;
-    }
-}
 
 /* Scroll Down Indicator */
 .scroll-down {
@@ -1012,4 +1014,66 @@ footer {
 .timeline-item,
 .skill-category {
     will-change: transform, opacity;
+}
+
+/* Mobile Overrides */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 5% !important;
+    }
+
+    .hero {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .hero-visual {
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        width: 100% !important;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .scroll-down {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    .navbar nav {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background: var(--card-bg);
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.5s;
+        z-index: 1000;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .mobile-nav-active .navbar nav {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin: 1.5rem 0;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
 }
