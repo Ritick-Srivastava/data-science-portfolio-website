@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m http.server 8080)",
+      "WebSearch",
+      "WebFetch(domain:www.datacamp.com)",
+      "WebFetch(domain:21st.dev)",
+      "WebFetch(domain:www.uupm.cc)",
+      "Bash(npx vite:*)"
+    ]
+  }
+}
