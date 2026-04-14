@@ -50,7 +50,7 @@ function ProjectModal({ project, onClose }) {
         {project.image && (
           <div className="relative h-48 md:h-56 overflow-hidden rounded-t-2xl bg-white/[0.02]">
             <img
-              src={project.image}
+              src={`${import.meta.env.BASE_URL}${project.image}`}
               alt={project.title}
               className="w-full h-full object-cover opacity-90"
             />
@@ -164,7 +164,7 @@ function ProjectCard({ project, index, onClick }) {
         {project.image && (
           <div className="relative h-36 md:h-40 overflow-hidden">
             <img
-              src={project.image}
+              src={`${import.meta.env.BASE_URL}${project.image}`}
               alt={project.title}
               className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-[1.02] transition-all duration-500"
               loading="lazy"
