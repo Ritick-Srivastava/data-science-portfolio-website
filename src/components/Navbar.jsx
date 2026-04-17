@@ -52,6 +52,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent("open-chat"))}
+            className="text-[13px] font-heading font-medium text-indigo-400/80 border border-indigo-500/25 px-4 py-1.5 rounded-full hover:bg-indigo-500/[0.08] hover:text-indigo-300 transition-colors cursor-pointer"
+          >
+            Ask me
+          </button>
           <a
             href={profile.resumeUrl}
             target="_blank"
@@ -102,6 +108,15 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
+              <button
+                onClick={() => {
+                  setMobileOpen(false);
+                  window.dispatchEvent(new CustomEvent("open-chat"));
+                }}
+                className="text-sm font-heading text-indigo-400/70 py-2 cursor-pointer text-left"
+              >
+                Ask me
+              </button>
               <a
                 href={profile.resumeUrl}
                 target="_blank"

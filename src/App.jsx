@@ -5,6 +5,7 @@ import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
+import ChatWidget from "./components/ChatWidget";
 import { profile } from "./data/content";
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <Skills />
         <Contact />
       </main>
+      <ChatWidget />
       <footer className="border-t border-white/[0.04] py-8 bg-[#030303]">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs font-body text-white/15">
