@@ -1,6 +1,6 @@
 export const profile = {
   name: "Ritick Srivastava",
-  tagline: "I find the signal. Then I ship the decision.",
+  tagline: "I turn data into decisions. And decisions into revenue.",
   role: "GTM Analyst & Data Scientist",
   company: "HackerRank",
   summary:
