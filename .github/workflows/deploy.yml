@@ -30,7 +30,7 @@ jobs:
       - run: npm ci
       - run: npx vite build
         env:
-          VITE_NVIDIA_NIM_API_KEY: ${{ secrets.VITE_NVIDIA_NIM_API_KEY }}
+          VITE_NIM_WORKER_URL: ${{ secrets.VITE_NIM_WORKER_URL }}
 
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
