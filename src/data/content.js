@@ -6,7 +6,7 @@ export const profile = {
   summary:
     "I sit at the intersection of data science and go-to-market strategy — running experiments, modeling funnels, and turning ambiguous data into decisions that move revenue.",
   resumeUrl:
-    "https://drive.google.com/file/d/1727LrDxEj7JGmI944DUh776vZdQFu-BI/view?usp=sharing",
+    "https://drive.google.com/file/d/1ctA2HHuG6QTm8vHXn0DruZcZKDfYGOoq/view?usp=sharing",
   email: "riticksrivastava.2000@gmail.com",
   linkedin: "https://www.linkedin.com/in/ritick-srivastava",
   github: "https://github.com/Ritick-Srivastava",
