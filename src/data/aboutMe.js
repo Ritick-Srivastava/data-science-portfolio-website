@@ -43,7 +43,7 @@ Tools: SQL, Python, Looker, Tableau, Power BI, Redash, Excel, FullStory, Airflow
 
 PROJECTS:
 1. Onboarding Experimentation System — an end-to-end system for simulating and analyzing onboarding experiments, from synthetic data generation to automated ship/kill recommendations. Uses both Bayesian inference and frequentist approaches. Available on GitHub.
-2. Customer Churn Prediction — churn prediction models using logistic regression, tree-based methods, and Cox Proportional Hazards to identify at-risk customers and inform retention strategies.
+2. ChatGPT's Causal Impact on Stack Overflow — quantified a ~17% causal decline in Stack Overflow search interest post-ChatGPT launch using synthetic control and OLS counterfactual modeling on Google Trends data, validated through placebo tests. Live on Streamlit.
 
 EDUCATION:
 BE in Electronics and Communication from BITS Pilani (Aug 2018 – May 2022). Engineering gave me the analytical foundations; data and GTM work gave me the product instinct.

@@ -201,20 +201,20 @@ export const projects = [
     image: "projects/onboarding-system.png",
   },
   {
-    title: "Customer Churn Prediction",
+    title: "ChatGPT's Causal Impact on Stack Overflow",
     question:
-      "Which customers are about to leave — and what behavioral patterns predict it?",
+      "Did ChatGPT actually cannibalize Stack Overflow — and by how much?",
     description:
-      "Churn prediction models using logistic regression, tree-based methods, and Cox Proportional Hazards to identify at-risk customers.",
+      "Quantified the causal effect of ChatGPT's launch on Stack Overflow search interest using synthetic control and OLS counterfactual modeling on Google Trends data.",
     details: [
-      "Interpreted hazard ratios and survival curves to find behavioral drivers of churn.",
-      "Informed targeted retention strategies through survival analysis.",
+      "Constructed a weighted synthetic control from a donor pool of comparable tech platforms to isolate the treatment effect.",
+      "Estimated a ~17% causal decline in Stack Overflow search interest attributable to ChatGPT adoption.",
+      "Validated findings through in-time and in-space placebo tests, confirming statistical significance.",
     ],
-    tags: ["Survival Analysis", "Scikit-Learn", "Pandas"],
-    github: null,
-    demo: null,
-    image: null,
-    comingSoon: true,
+    tags: ["Causal Inference", "Synthetic Control", "OLS Modeling", "Python"],
+    github: "https://github.com/Ritick-Srivastava/stackoverflow-chatgpt-causal-impact",
+    demo: "https://stackoverflow-chatgpt-causal-impact.streamlit.app/",
+    image: "projects/stackoverflow-causal-impact.jpg",
   },
 ];
 
